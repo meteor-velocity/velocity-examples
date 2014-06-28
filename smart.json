@@ -1,11 +1,11 @@
 {
   "packages": {
     "velocity": {
-      "path" : "../src"
+      "-path" : "../src"
     },
     "mocha-web-velocity": {},
     "jasmine-unit": {
-      "path" : "../../jasmine-unit"
+      "-path" : "../../jasmine-unit"
     },
     "velocity-html-reporter": {},
     "moment": {}

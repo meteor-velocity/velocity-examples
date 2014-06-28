@@ -2,19 +2,17 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "velocity": {
-        "path": "../src"
-      },
+      "velocity": {},
       "mocha-web-velocity": {},
-      "jasmine-unit": {
-        "path": "../../jasmine-unit"
-      },
+      "jasmine-unit": {},
       "velocity-html-reporter": {},
       "moment": {}
     },
     "packages": {
       "velocity": {
-        "path": "../src"
+        "git": "https://github.com/xolvio/velocity.git",
+        "tag": "v0.1.9",
+        "commit": "c5f5f721740f77a4a4924c44375697bdd4b5f3c8"
       },
       "mocha-web-velocity": {
         "git": "https://github.com/mad-eye/meteor-mocha-web.git",
@@ -22,7 +20,9 @@
         "commit": "1204867efdb23ba6115157b5f2e68da4edb7d8e9"
       },
       "jasmine-unit": {
-        "path": "../../jasmine-unit"
+        "git": "https://github.com/xolvio/jasmine-unit.git",
+        "tag": "v0.1.16",
+        "commit": "17b7569af44c21a171c0bcc03d857e93182a7dc1"
       },
       "velocity-html-reporter": {
         "git": "https://github.com/rissem/velocity-html-reporter.git",
