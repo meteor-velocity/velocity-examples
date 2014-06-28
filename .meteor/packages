@@ -7,7 +7,7 @@ standard-app-packages
 autopublish
 insecure
 velocity
-mocha-web
+mocha-web-velocity
 coffeescript
 jasmine-unit
 moment

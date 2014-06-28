@@ -1,3 +1,2 @@
 packages/*
-!packages/things*
 tests/a1-package-stub.js

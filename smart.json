@@ -1,11 +1,12 @@
 {
   "packages": {
-    "velocity": {},
-    "mocha-web": {
-      "git": "https://github.com/mad-eye/meteor-mocha-web",
-      "branch": "velocity"
+    "velocity": {
+      "path" : "../src"
     },
-    "jasmine-unit": {},
+    "mocha-web-velocity": {},
+    "jasmine-unit": {
+      "path" : "../../jasmine-unit"
+    },
     "velocity-html-reporter": {},
     "moment": {}
   }
