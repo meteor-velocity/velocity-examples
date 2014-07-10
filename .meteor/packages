@@ -8,7 +8,7 @@ autopublish
 insecure
 velocity
 mocha-web-velocity
-coffeescript
 jasmine-unit
+jasmine
 moment
 velocity-html-reporter
