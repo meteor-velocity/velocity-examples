@@ -1,0 +1,8 @@
+{
+    "name": "leaderboard-tinytests",
+    "description": "Provides unit tests for leaderboard application.",
+    "homepage": "https://github.com/awatson1978/leaderboard-tinytests",
+    "author": "Abigail Watson  (http://www.pentasyllabic.com)",
+    "version": "0.1.0",
+    "git": "https://github.com/awatson1978/leaderboard-tinytests.git"
+}
