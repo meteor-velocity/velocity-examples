@@ -12,3 +12,4 @@ coffeescript
 jasmine-unit
 moment
 velocity-html-reporter
+selenium-nightwatch
