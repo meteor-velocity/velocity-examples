@@ -24,6 +24,7 @@ git clone https://github.com/meteor/meteor.git
 cd meteor/examples/leaderboard
 
 # make sure we're using the latest version of Meteor
+meteor update
 mrt update
 
 # install velocity core files
