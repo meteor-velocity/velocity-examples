@@ -19,17 +19,26 @@ Building From Scratch
 ------------------------
 
 ````sh
+# get a copy of the leaderboard example
 git clone https://github.com/meteor/meteor.git
 cd meteor/examples/leaderboard
 
+# install velocity core files
 mrt add velocity
-mrt add mocha-web-velocity
 mrt add coffeescript
-mrt add jasmine-unit
 mrt add moment
 mrt add velocity-html-reporter
+
+# install reporting frameworks
+mrt add jasmine-unit
+mrt add mocha-web-velocity
 mrt add selenium-nightwatch
+
+# install tinytests (optional)
+mrt add leaderboard-tinytests
 ````
+
+
 
 Tutorials  
 ------------------------
