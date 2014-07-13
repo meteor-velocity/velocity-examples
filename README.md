@@ -1,8 +1,7 @@
 velocity-example
 ================
 
-A leaderboard example with velocity configured with jasmine-unit, mocha web &amp; jasmine
-A leaderboard example with velocity configured with jasmine-unit, nightwatch-selenium, &amp; mocha web
+A leaderboard example with velocity configured with jasmine-unit, mocha web, jasmine, &amp; nightwatch-selenium
 
 
 Installation
