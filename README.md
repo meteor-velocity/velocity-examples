@@ -9,6 +9,7 @@ A leaderboard example with velocity configured with jasmine-unit, mocha web, jas
 ```sh
 # clone the velocity-example repo and run meteorite...
 $ git clone https://github.com/xolvio/velocity-example.git
+$ cd velocity-example
 $ mrt
 ```
 
