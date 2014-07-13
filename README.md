@@ -1,7 +1,7 @@
 velocity-example
 ================
 
-A leaderboard example with velocity configured with jasmine-unit, mocha web, jasmine, &amp; nightwatch-selenium
+A leaderboard example with velocity configured with jasmine-unit, mocha web, &amp; jasmine.
 
 
 ### Installation
@@ -21,7 +21,6 @@ The `velocity` package coordinates between test frameworks and provides a common
 * [mocha-web-velocity](https://github.com/mad-eye/meteor-mocha-web) - A Velocity version of mocha-web.  Runs mocha tests in the Meteor context which is great for integration testing.
 * [jasmine-unit](https://github.com/xolvio/jasmine-unit) - Runs jasmine unit tests out of the Meteor context.  Fast and good for smaller unit tests.
 * [jasmine](https://github.com/Sanjo/meteor-jasmine) - run jasmine tests in the Meteor context - great for integration testing.
-* [selenium-nightwatch](https://github.com/awatson1978/selenium-nightwatch/) - run acceptance tests in real browsers using Selenium and Nightwatch.
 
 
 
