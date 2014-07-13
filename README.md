@@ -13,37 +13,15 @@ $ mrt
 ```
 
 
-### Building From Scratch  
+## Included Test Frameworks
 
-```sh
-$ meteor create --example leaderboard
-$ cd leaderboard
+The `velocity` package coordinates between test frameworks and provides a common structure for reporting test results.  Velocity by itself does not perform any tests.  This example app includes the following velocity-compatible test frameworks:
 
-# install velocity reporter
-$ mrt add velocity-html-reporter
+* [mocha-web-velocity](https://github.com/mad-eye/meteor-mocha-web) - A Velocity version of mocha-web.  Runs mocha tests in the Meteor context which is great for integration testing.
+* [jasmine-unit](https://github.com/xolvio/jasmine-unit) - Runs jasmine unit tests out of the Meteor context.  Fast and good for smaller unit tests.
+* [jasmine](https://github.com/Sanjo/meteor-jasmine) - run jasmine tests in the Meteor context - great for integration testing.
+* [selenium-nightwatch](https://github.com/awatson1978/selenium-nightwatch/) - run acceptance tests in real browsers using Selenium and Nightwatch.
 
-# install reporting frameworks
-$ mrt add jasmine-unit
-$ mrt add mocha-web-velocity
-$ mrt add jasmine
-$ mrt add selenium-nightwatch
-
-# install tinytests (optional)
-$ mrt add leaderboard-tinytests
-```
-
-Now copy the tests from the [velocity-example repo](https://github.com/xolvio/velocity-example/tree/master/tests) to your `tests` directory.
-The easiest way to do this is to clone the velocity-example repo and copy them over like this:
-
-```sh
-$ mkdir -p ~/tmp
-$ cd ~/tmp
-$ git clone https://github.com/xolvio/velocity-example.git
-$ cd -
-# assuming you are back in your leaderboard directory...
-$ mkdir -p tests
-$ cp -r ~/tmp/velocity-example/tests/* tests
-```
 
 
 ### Tutorials  
