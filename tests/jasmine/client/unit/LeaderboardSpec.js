@@ -3,6 +3,7 @@ describe('PlayersService', function () {
 
   beforeEach(function () {
     MeteorStubs.install();
+    mock(window, 'Players');
   });
 
   afterEach(function () {
