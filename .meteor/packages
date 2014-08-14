@@ -12,3 +12,4 @@ jasmine-unit
 jasmine
 moment
 velocity-html-reporter
+selenium-nightwatch

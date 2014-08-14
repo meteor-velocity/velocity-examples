@@ -5,6 +5,7 @@
     "jasmine-unit": {},
     "jasmine": {},
     "velocity-html-reporter": {},
-    "moment": {}
+    "moment": {},
+    "selenium-nightwatch": {}
   }
 }
