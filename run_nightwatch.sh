@@ -1,0 +1,1 @@
+packages/selenium-nightwatch/launch_nightwatch_from_app_root.sh
