@@ -1,8 +1,8 @@
 {
   "packages": {
-    "velocity": {},
-    "jasmine": {},
-    "velocity-html-reporter": {},
-    "moment": {}
+    "velocity-html-reporter": {
+      "git": "https://github.com/Sanjo/velocity-html-reporter.git",
+      "branch": "0.9"
+    }
   }
 }
