@@ -1,1 +1,0 @@
-packages/selenium-nightwatch/launch_nightwatch_from_velocity.sh
