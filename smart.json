@@ -1,8 +1,0 @@
-{
-  "packages": {
-    "velocity-html-reporter": {
-      "git": "https://github.com/Sanjo/velocity-html-reporter.git",
-      "branch": "0.9"
-    }
-  }
-}

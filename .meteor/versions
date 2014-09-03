@@ -43,6 +43,6 @@ standard-app-packages@1.0.0
 templating@1.0.4
 ui@1.0.0
 underscore@1.0.0
-velocity-html-reporter@0.1.5
+velocity:html-reporter@0.1.5
 webapp@1.0.2
 xolvio:velocity@0.1.18
