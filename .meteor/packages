@@ -13,3 +13,4 @@ jasmine
 moment
 velocity-html-reporter
 selenium-nightwatch
+velocity-coverage
