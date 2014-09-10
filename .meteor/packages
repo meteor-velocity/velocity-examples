@@ -7,7 +7,6 @@ standard-app-packages
 autopublish
 insecure
 mrt:moment@2.8.1
-xolvio:velocity
+velocity:core
+velocity:html-reporter@0.2.0-pre0
 sanjo:jasmine
-velocity:html-reporter
-
