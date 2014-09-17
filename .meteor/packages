@@ -8,5 +8,5 @@ autopublish
 insecure
 mrt:moment@2.8.1
 velocity:core
-velocity:html-reporter@0.2.0-pre0
+velocity:html-reporter
 sanjo:jasmine

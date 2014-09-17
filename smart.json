@@ -2,7 +2,7 @@
   "packages": {
     "sanjo:jasmine": {
       "git": "https://github.com/Sanjo/meteor-jasmine.git",
-      "tag": "v0.2.0-pre1"
+      "tag": "v0.2.0"
     }
   }
 }
