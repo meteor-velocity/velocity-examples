@@ -43,7 +43,7 @@ reactive-var@1.0.1
 reload@1.1.0
 retry@1.0.0
 routepolicy@1.0.1
-sanjo:jasmine@0.2.0
+sanjo:jasmine@0.2.4
 session@1.0.1
 spacebars-compiler@1.0.2
 spacebars@1.0.1
@@ -54,6 +54,6 @@ ui@1.0.2
 underscore@1.0.0
 url@1.0.0
 velocity:core@0.2.0
-velocity:html-reporter@0.2.0
+velocity:html-reporter@0.2.1
 webapp-hashing@1.0.0
 webapp@1.1.1
