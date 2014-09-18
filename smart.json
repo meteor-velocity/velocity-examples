@@ -1,9 +1,10 @@
 {
   "packages": {
-    "velocity": {},
     "mocha-web-velocity": {},
     "jasmine-unit": {},
     "jasmine": {},
+    "velocity": {},
+    "velocity-coverage": {},
     "velocity-html-reporter": {},
     "moment": {},
     "selenium-nightwatch": {}
