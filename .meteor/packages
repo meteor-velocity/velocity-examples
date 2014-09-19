@@ -12,5 +12,5 @@ jasmine-unit
 jasmine
 moment
 velocity-html-reporter
-selenium-nightwatch
+selenium-nightwatch-0.8.3
 velocity-coverage
