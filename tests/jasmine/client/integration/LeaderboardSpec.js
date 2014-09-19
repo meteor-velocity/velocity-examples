@@ -9,7 +9,7 @@ var unselectPlayer = function () {
   Session.set("selected_player", null);
 };
 
-describe("Select Grace Hopper", function () {
+describe("Selecting Grace Hopper", function () {
   beforeEach(function (done) {
     Meteor.autorun(function (c) {
       var grace = Players.findOne({name: "Grace Hopper"});
@@ -20,7 +20,7 @@ describe("Select Grace Hopper", function () {
     })
   });
 
-  it("should show Grace the inside div class='name' (above the give points button)", function () {
+  it("should show Grace above the give points button", function () {
     expect($("div.details > div.name").html()).toEqual("Grace Hopper");
   });
 
@@ -36,15 +36,15 @@ describe("Point Assignment", function () {
     selectGraceHopper(done);
   });
 
-  it("should give a player 5 points when they are selected and the button is pressed", function () {
+  it("should give a player 5 points when he is selected and the button is pressed", function () {
     var graceInitialPoints = Players.findOne({name: "Grace Hopper"}).score;
     $("input:button").click();
-    expect(graceInitialPoints + 5).toBe(Players.findOne({name: "Grace Hopper"}).score);
+    expect(Players.findOne({name: "Grace Hopper"}).score).toBe(graceInitialPoints + 5);
   });
 });
 
 describe("Player Ordering", function () {
-  it("should result in a list where the first player as many or more points than the second player", function () {
+  it("should result in a list where the first player has as many or more points than the second player", function () {
     var players = Template.leaderboard.players().fetch();
     expect(players[0].score >= players[1].score).toBe(true);
   });
