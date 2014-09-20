@@ -1,12 +1,3 @@
 {
-  "packages": {
-    "mocha-web-velocity": {},
-    "jasmine-unit": {},
-    "jasmine": {},
-    "velocity": {},
-    "velocity-coverage": {},
-    "velocity-html-reporter": {},
-    "moment": {},
-    "selenium-nightwatch": {"git":"http://github.com/awatson1978/selenium-nightwatch-0.8.3"}
-  }
+  "packages": {}
 }

@@ -6,11 +6,3 @@
 standard-app-packages
 autopublish
 insecure
-velocity
-mocha-web-velocity
-jasmine-unit
-jasmine
-moment
-velocity-html-reporter
-selenium-nightwatch-0.8.3
-velocity-coverage
