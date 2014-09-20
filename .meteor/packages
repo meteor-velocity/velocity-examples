@@ -9,3 +9,5 @@ insecure
 mrt:moment@2.8.1
 velocity:html-reporter
 sanjo:jasmine
+clinical:nightwatch
+
