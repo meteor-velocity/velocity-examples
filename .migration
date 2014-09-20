@@ -1,9 +1,8 @@
 
 
-velocity
-mocha-web-velocity
-jasmine-unit
-jasmine
 
-velocity-html-reporter
-velocity-coverage
+meteor add velocity:core
+meteor add velocity:html-reporter
+meteor add mike:mocha
+meteor add sanjo:jasmine
+meteor add xolvio:jasmine-unit

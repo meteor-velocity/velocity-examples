@@ -8,4 +8,7 @@ autopublish
 insecure
 mrt:momentjs
 clinical:nightwatch
-
+velocity:core
+velocity:html-reporter
+mike:mocha
+sanjo:jasmine
