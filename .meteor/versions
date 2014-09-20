@@ -10,7 +10,7 @@ blaze@2.0.0
 boilerplate-generator@1.0.0
 callback-hook@1.0.0
 check@1.0.0
-clinical:nightwatch@1.2.0
+clinical:nightwatch@1.2.15
 ctl-helper@1.0.3
 ctl@1.0.1
 ddp@1.0.8
@@ -55,7 +55,7 @@ tracker@1.0.2
 ui@1.0.2
 underscore@1.0.0
 url@1.0.0
-velocity:core@0.2.0
-velocity:html-reporter@0.2.1
+velocity:core@0.2.5
+velocity:html-reporter@0.2.2
 webapp-hashing@1.0.0
 webapp@1.1.1
