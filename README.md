@@ -7,7 +7,7 @@ A leaderboard example with velocity configured with jasmine-unit, mocha web, jas
 ### Installation
 
 ```sh
-# clone the velocity-example repo and run meteorite...
+# clone the velocity-example repo and run meteor...
 $ git clone https://github.com/meteor-velocity/velocity-example.git
 $ cd velocity-example
 $ meteor
@@ -45,6 +45,6 @@ The `velocity` package coordinates between test frameworks and provides a common
 
 ### Tutorials
 
-[Writing Acceptance Tests (with Nightwatch)](https://github.com/awatson1978/meteor-cookbook/blob/master/cookbook/writing.acceptance.test.md)
-[Writing Unit Tests (with Jasmine and Velocity)](https://github.com/awatson1978/meteor-cookbook/blob/master/cookbook/writing.unit.tests.with.jasmine.md)
-[Writing Unit Tests (with Tinytest)](https://github.com/awatson1978/meteor-cookbook/blob/master/cookbook/writing.unit.tests.md)
+[Writing Acceptance Tests (with Nightwatch)](https://github.com/awatson1978/meteor-cookbook/blob/master/cookbook/writing.acceptance.test.md)  
+[Writing Unit Tests (with Jasmine and Velocity)](https://github.com/awatson1978/meteor-cookbook/blob/master/cookbook/writing.unit.tests.with.jasmine.md)  
+[Writing Unit Tests (with Tinytest)](https://github.com/awatson1978/meteor-cookbook/blob/master/cookbook/writing.unit.tests.md)  
