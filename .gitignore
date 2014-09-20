@@ -1,3 +1,10 @@
-packages/*
+packages/jasmine-unit		
+packages/mirror			
+packages/moment			
+packages/velocity
+packages/mocha-web-velocity	
+packages/package-stubber		
+packages/velocity-html-reporter
+
 tests/a1-package-stubs.js
 smart.lock
