@@ -6,3 +6,6 @@
 standard-app-packages
 autopublish
 insecure
+mrt:momentjs
+clinical:nightwatch
+
