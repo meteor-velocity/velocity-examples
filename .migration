@@ -1,8 +1,0 @@
-
-
-
-meteor add velocity:core
-meteor add velocity:html-reporter
-meteor add mike:mocha
-meteor add sanjo:jasmine
-meteor add xolvio:jasmine-unit

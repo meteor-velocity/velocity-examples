@@ -1,24 +1,34 @@
 velocity-example
 ================
 
-A leaderboard example with velocity configured with jasmine-unit, mocha web, &amp; jasmine.
+A leaderboard example with velocity configured with jasmine-unit, mocha web, jasmine, nightwatch, &amp; selenium.
 
 
 ### Installation
 
 ```sh
 # clone the velocity-example repo and run meteorite...
-$ git clone https://github.com/xolvio/velocity-example.git
+$ git clone https://github.com/meteor-velocity/velocity-example.git
 $ cd velocity-example
-$ mrt
+$ meteor
 
-# if you have troubles, try updating your installations
-# there are some reports of having to run these updates a few times to get everything updated
-$ npm update
-$ meteor update
-$ mrt update
-$ mrt
+```
 
+
+### Run Nightwatch Tests
+
+```sh
+# optional:  you may want to reset your application data
+terminal-a$ meteor reset
+
+# run your application as usual
+terminal-a$ meteor
+
+# then open up a second terminal and run_nightwatch to run all tests
+terminal-b$ sudo ./run_nightwatch.sh
+
+# or specify a specific test
+terminal-b$ sudo ./run_nightwatch.sh -t tests/nightwatch/LeaderboardWalkthrough.js
 ```
 
 
@@ -26,9 +36,10 @@ $ mrt
 
 The `velocity` package coordinates between test frameworks and provides a common structure for reporting test results.  Velocity by itself does not perform any tests.  This example app includes the following velocity-compatible test frameworks:
 
-* [mocha-web-velocity](https://github.com/mad-eye/meteor-mocha-web) - A Velocity version of mocha-web.  Runs mocha tests in the Meteor context which is great for integration testing.
-* [jasmine-unit](https://github.com/xolvio/jasmine-unit) - Runs jasmine unit tests out of the Meteor context.  Fast and good for smaller unit tests.
-* [jasmine](https://github.com/Sanjo/meteor-jasmine) - run jasmine tests in the Meteor context - great for integration testing.
+* [mike:mocha](https://github.com/mad-eye/meteor-mocha-web) - A Velocity version of mocha-web.  Runs mocha tests in the Meteor context which is great for integration testing.
+* [xolvio:jasmine-unit](https://github.com/xolvio/jasmine-unit) - Runs jasmine unit tests out of the Meteor context.  Fast and good for smaller unit tests.
+* [sanjo:jasmine](https://github.com/Sanjo/meteor-jasmine) - run jasmine tests in the Meteor context - great for integration testing.
+* [clinical:nightwatch](https://github.com/awatson1978/clinical-nightwatch) - Ultra-easy acceptance testing with Selenium browser automation, Saucelabs, and Browserstack.
 
 
 
