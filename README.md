@@ -1,23 +1,16 @@
 velocity-example
 ================
 
-A leaderboard example with velocity configured with jasmine-unit, mocha web, &amp; jasmine.
+A leaderboard example with velocity configured with jasmine
 
 
 ### Installation
 
 ```sh
-# clone the velocity-example repo and run meteorite...
+# clone the velocity-example repo and run meteor
 $ git clone https://github.com/xolvio/velocity-example.git
 $ cd velocity-example
-$ mrt
-
-# if you have troubles, try updating your installations
-# there are some reports of having to run these updates a few times to get everything updated
-$ npm update
-$ meteor update
-$ mrt update
-$ mrt
+$ meteor
 
 ```
 
@@ -26,8 +19,8 @@ $ mrt
 
 The `velocity` package coordinates between test frameworks and provides a common structure for reporting test results.  Velocity by itself does not perform any tests.  This example app includes the following velocity-compatible test frameworks:
 
-* [jasmine](https://github.com/Sanjo/meteor-jasmine) - run jasmine tests in the Meteor context - great for integration testing.
-
+* [jasmine](https://github.com/Sanjo/meteor-jasmine) - Easily run Jasmine browser integration tests and server unit tests.
+* TODO - add more frameworks
 
 
 ### Tutorials
