@@ -3,6 +3,8 @@ velocity-example
 
 A leaderboard example with velocity configured with jasmine
 
+<img src="https://travis-ci.org/meteor-velocity/velocity-example.svg?branch=master" />
+
 
 ### Installation
 
