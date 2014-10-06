@@ -30,6 +30,7 @@ livedata@1.0.10
 logging@1.0.3
 meteor-platform@1.1.1
 meteor@1.1.1
+mike:mocha@0.3.12
 minifiers@1.1.0
 minimongo@1.0.3
 mobile-status-bar@1.0.0
@@ -43,7 +44,7 @@ reactive-var@1.0.2
 reload@1.1.0
 retry@1.0.0
 routepolicy@1.0.1
-sanjo:jasmine@0.4.3
+sanjo:jasmine@0.4.7
 session@1.0.2
 spacebars-compiler@1.0.2
 spacebars@1.0.2
@@ -54,6 +55,6 @@ ui@1.0.3
 underscore@1.0.0
 url@1.0.0
 velocity:core@0.2.14
-velocity:html-reporter@0.2.2
+velocity:html-reporter@0.2.3
 webapp-hashing@1.0.0
 webapp@1.1.2
