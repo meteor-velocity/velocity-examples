@@ -14,7 +14,7 @@ $ git clone https://github.com/meteor-velocity/velocity-examples.git
 $ cd velocity-examples
 
 # Choose an example that you want to try. For example leaderboard-jasmine.
-$ cd leaderboard-example
+$ cd leaderboard-jasmine
 $ meteor
 
 ```
