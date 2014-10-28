@@ -1,7 +1,7 @@
-velocity-example
+velocity-examples
 ================
 
-Different examples of using testing frameworks that are integrated with Velocity.
+Examples of using testing frameworks that are integrated with Velocity.
 
 [<img src="https://travis-ci.org/meteor-velocity/velocity-example.svg?branch=master" />](https://travis-ci.org/meteor-velocity/velocity-example)
 
@@ -9,9 +9,12 @@ Different examples of using testing frameworks that are integrated with Velocity
 ### Installation
 
 ```sh
-# clone the velocity-example repo and run meteor
-$ git clone https://github.com/xolvio/velocity-example.git
-$ cd velocity-example
+# clone the velocity-examples repo and run meteor
+$ git clone https://github.com/meteor-velocity/velocity-examples.git
+$ cd velocity-examples
+
+# Choose an example that you want to try. For example leaderboard-jasmine.
+$ cd leaderboard-example
 $ meteor
 
 ```
