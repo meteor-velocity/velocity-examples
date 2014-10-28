@@ -44,7 +44,7 @@ reactive-var@1.0.3
 reload@1.1.1
 retry@1.0.1
 routepolicy@1.0.2
-sanjo:jasmine@0.4.19
+sanjo:jasmine@0.5.0-rc.1
 session@1.0.4
 spacebars-compiler@1.0.3
 spacebars@1.0.3
