@@ -1,7 +1,7 @@
 velocity-example
 ================
 
-A leaderboard example with velocity configured with jasmine
+Different examples of using testing frameworks that are integrated with Velocity.
 
 [<img src="https://travis-ci.org/meteor-velocity/velocity-example.svg?branch=master" />](https://travis-ci.org/meteor-velocity/velocity-example)
 
@@ -15,14 +15,6 @@ $ cd velocity-example
 $ meteor
 
 ```
-
-
-### Included Test Frameworks
-
-The `velocity` package coordinates between test frameworks and provides a common structure for reporting test results.  Velocity by itself does not perform any tests.  This example app includes the following velocity-compatible test frameworks:
-
-* [jasmine](https://github.com/Sanjo/meteor-jasmine) - Easily run Jasmine browser integration tests and server unit tests.
-* TODO - add more frameworks
 
 
 ### Tutorials
