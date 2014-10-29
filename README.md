@@ -3,9 +3,6 @@ velocity-examples
 
 Examples of using testing frameworks that are integrated with Velocity.
 
-[<img src="https://travis-ci.org/meteor-velocity/velocity-example.svg?branch=master" />](https://travis-ci.org/meteor-velocity/velocity-example)
-
-
 ### Installation
 
 ```sh
