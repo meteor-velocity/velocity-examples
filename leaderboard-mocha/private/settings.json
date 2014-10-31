@@ -3,6 +3,7 @@
     "secret": "shazam"
   },
     "public": {
+        "info": "helloworld",
         "mocha_setup_args": {
             "ui": "tdd",
             "globals": ["script*"]
