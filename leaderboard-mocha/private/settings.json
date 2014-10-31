@@ -1,4 +1,7 @@
 {
+  "private": {
+    "secret": "shazam"
+  },
     "public": {
         "mocha_setup_args": {
             "ui": "tdd",

@@ -43,6 +43,9 @@ if (Meteor.isServer) {
   });
 
   Meteor.startup(function () {
+
+    console.log("Meteor.settings.private", Meteor.settings.private)
+
     if (Players.find().count() === 0) {
       var names = ["Ada Lovelace",
                    "Grace Hopper",

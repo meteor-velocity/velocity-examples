@@ -4,6 +4,11 @@ if (!(typeof MochaWeb === 'undefined')){
       it("should insert players into the database after server start", function(){
         chai.assert(Players.find().count() > 0);
       });
+
+      it("server can read settings.private", function(){
+        chai.assert.equal(Meteor.settings.private.secret, "shazam");
+      });
+
     });
   });
 }
