@@ -6,7 +6,7 @@ Feature: Player score can be increased manually
 
   Scenario: Give 5 points to a player
     Given I am on the leaderboard page
-#    And "Grace Hopper" has a score of 5
+    And "Grace Hopper" has a score of 5
     When I click on "Grace Hopper"
     Then "Grace Hopper" has a score of 10
 
