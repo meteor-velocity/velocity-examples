@@ -1,9 +1,14 @@
+// TODO THIS FILE SHOULD BE IN THE /TESTS DIRECTORY AND VELOCITY WILL COPY IT TO THE MIRROR
+// IN HERE FOR TESTING WITHOUT A MIRROR FOR NOW
+
+
 (function () {
 
   'use strict';
 
-  // TODO THIS FILE SHOULD BE IN THE /TESTS DIRECTORY AND VELOCITY WILL COPY IT TO THE MIRROR
-  // IN HERE FOR TESTING WITHOUT A MIRROR FOR NOW
+  Router.route('/', function () {
+    this.render('');
+  });
 
   if (Meteor.isServer) {
 
@@ -27,5 +32,17 @@
     });
 
   }
+
+  Router.map(function () {
+    this.route('reset', {
+      where: 'server',
+      path: '/reset',
+      action: function () {
+        _resetPlayers();
+        this.response.writeHead(200, {'Content-Type': 'text/html'});
+        this.response.end('<span>OK</span>');
+      }
+    });
+  });
 
 })();

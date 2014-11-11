@@ -27,12 +27,17 @@
     "check": false,
     "Npm": false,
     "Package": false,
+    "Random": false,
+    "Session": false,
+    "Template": false,
+    "Mongo": false,
     "DEBUG": false,
     "Velocity": false,
     "VelocityTestFiles": false,
     "VelocityTestReports": false,
     "VelocityAggregateReports": false,
     "VelocityLogs": false,
+    "Router": false,
     "_": false,
     "Players": false
   }

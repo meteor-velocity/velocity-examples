@@ -5,8 +5,7 @@ Feature: Player score can be increased manually
   So that I can publicly display an up-to-date scoreboard
 
   Scenario: Give 5 points to a player
-    Given I am on the leaderboard page
+    Given I'm on the home page
     And "Grace Hopper" has a score of 5
     When I click on "Grace Hopper"
     Then "Grace Hopper" has a score of 10
-

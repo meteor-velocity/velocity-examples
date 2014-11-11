@@ -2,35 +2,38 @@
 
   'use strict';
 
-  var bindEnv = Meteor.bindEnvironment;
-
   module.exports = function () {
 
-    // - - - - - WORLD.JS - - - - -
-    this.World = bindEnv(function (next) {
-      next();
+    var library = this;
+
+    var leaderboardXpath = '//ol[@class="leaderboard"]',
+        playerXpath = leaderboardXpath + '/li/span[contains(text(), "@playerName")]',
+        playerScoreXpath = playerXpath + '/../span[@class="score"]';
+
+    library.Given(/^I'm on the home page$/, function (next) {
+      library.browser.
+        url('http://localhost:3000').
+        call(next);
     });
 
-    // - - - - - HOOKS.JS - - - - -
-    this.Before(bindEnv(function () {
-      var next = arguments[arguments.length - 1];
-      Meteor.call('reset', next);
-    }));
-    this.After(bindEnv(function () {
-      var next = arguments[arguments.length - 1];
-      next();
-    }));
+    library.When(/^I click on "([^"]*)"$/, function (playerName, next) {
+      library.browser.
+        click(playerXpath.replace('@playerName', playerName)).
+        waitForVisible('button.inc').
+        click('button.inc').
+        call(next);
+    });
 
-    // - - - - - STEPS.JS - - - - -
-    this.Given(/^I am on the leaderboard page$/, bindEnv(function (next) {
-      next();
-    }));
-    this.When(/^I click on "([^"]*)"$/, bindEnv(function (playerName, next) {
-      next();
-    }));
-    this.Then(/^"([^"]*)" has a score of (\d+)$/, bindEnv(function (playerName, expectedScore, next) {
-      next();
-    }));
+    library.Then(/^"([^"]*)" has a score of (\d+)$/, function (playerName, expectedScore, next) {
+      library.browser.
+        getText(playerScoreXpath.replace('@playerName', playerName), function (error, actualScore) {
+          if (actualScore !== expectedScore) {
+            next.fail('' + actualScore + ' did not match ' + expectedScore);
+          } else {
+            next();
+          }
+        });
+    });
 
   };
 
