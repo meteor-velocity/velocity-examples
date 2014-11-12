@@ -6,10 +6,6 @@
 
   'use strict';
 
-  Router.route('/', function () {
-    this.render('');
-  });
-
   if (Meteor.isServer) {
 
     // create a predictable set of players and score to test with
@@ -26,23 +22,11 @@
     };
 
     Meteor.methods({
-      'reset': function () {
+      '/fixtures/resetPlayers': function () {
         _resetPlayers();
       }
     });
 
   }
-
-  Router.map(function () {
-    this.route('reset', {
-      where: 'server',
-      path: '/reset',
-      action: function () {
-        _resetPlayers();
-        this.response.writeHead(200, {'Content-Type': 'text/html'});
-        this.response.end('<span>OK</span>');
-      }
-    });
-  });
 
 })();

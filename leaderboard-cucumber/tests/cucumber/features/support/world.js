@@ -14,8 +14,9 @@
 
       var wdio = Package['xolvio:webdriver'].wdio;
 
-      wdio.getBrowser({
+      wdio.getGhostDriver({
         desiredCapabilities: {browserName: 'PhantomJs'},
+        port: 4444,
         logLevel: 'silent'
       }, function (browser) {
         library.browser = browser;

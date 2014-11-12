@@ -8,4 +8,4 @@ autopublish
 insecure
 xolvio:webdriver
 xolvio:cucumber
-iron:router
+meteorclub:rester
