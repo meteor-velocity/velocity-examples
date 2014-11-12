@@ -10,12 +10,12 @@
       var next = arguments[arguments.length - 1];
       library.browser.
         init().
-        url('http://localhost:3000/fixtures/resetPlayers').
-        getText('//pre', function(e, v) {
-          if (JSON.parse(v).status === 'OK') {
+        url(library.cucumber.mirror.rootUrl + 'fixtures/resetPlayers').
+        getText('//pre', function (e, v) {
+          if (v !== 'undefined' && JSON.parse(v).status === 'OK') {
             next();
           } else {
-            next.fail('Response from reset was ' + v.status);
+            next.fail('Response from reset was ' + v.status ? v.status : v);
           }
         });
     });

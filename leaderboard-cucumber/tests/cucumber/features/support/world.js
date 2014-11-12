@@ -12,9 +12,10 @@
       // so we keep the world instance on the cucumber library scope
       library.world = this;
 
-      var wdio = Package['xolvio:webdriver'].wdio;
+      library.cucumber = Package['xolvio:cucumber'].cucumber;
+      library.wdio = Package['xolvio:webdriver'].wdio;
 
-      wdio.getGhostDriver({
+      library.wdio.getGhostDriver({
         desiredCapabilities: {browserName: 'PhantomJs'},
         port: 4444,
         logLevel: 'silent'

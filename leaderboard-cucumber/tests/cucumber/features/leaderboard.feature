@@ -8,4 +8,5 @@ Feature: Player score can be increased manually
     Given I'm on the home page
     And "Grace Hopper" has a score of 5
     When I click on "Grace Hopper"
+    And I click add five points
     Then "Grace Hopper" has a score of 10
