@@ -9,13 +9,21 @@ Examples of using testing frameworks that are integrated with Velocity.
 # clone the velocity-examples repo and run meteor
 $ git clone https://github.com/meteor-velocity/velocity-examples.git
 $ cd velocity-examples
-
-# Choose an example that you want to try. For example leaderboard-jasmine.
-$ cd leaderboard-jasmine
-$ meteor
-
 ```
 
+### Choose an example that you want to try.
+
+#### For Jasmine:
+```sh
+$ cd leaderboard-jasmine
+$ meteor
+```
+
+#### For Cucumber:
+```sh
+$ cd leaderboard-cucumber
+$ meteor
+```
 
 ### Tutorials
 
