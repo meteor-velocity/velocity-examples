@@ -65,5 +65,5 @@ velocity:html-reporter@0.3.0-rc.3
 velocity:shim@0.0.2
 webapp-hashing@1.0.1
 webapp@1.1.4
-xolvio:cucumber@0.0.3
+xolvio:cucumber@0.0.4
 xolvio:webdriver@0.0.1
