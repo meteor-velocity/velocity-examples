@@ -54,6 +54,16 @@ Players = new Mongo.Collection('players');
         });
       }
     });
+
+  }
+
+  // adding this to suppress the noisy auto-publish error from meteor
+  if (Meteor.isClient) {
+    Meteor.subscribe('players');
+  } else {
+    Meteor.publish('players', function () {
+      return Players.find();
+    });
   }
 
 })();
