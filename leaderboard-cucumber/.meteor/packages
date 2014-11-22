@@ -6,4 +6,6 @@
 standard-app-packages
 insecure
 meteorclub:rester
-xolvio:cucumber
+xolvio:cucumber@0.0.11
+xolvio:webdriver
+velocity:core@1.0.0-rc.8
