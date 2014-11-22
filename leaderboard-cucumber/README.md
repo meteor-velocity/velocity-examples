@@ -1,7 +1,7 @@
 leaderboard-cucumber
 ====================
 
-## This framework uses the [node-soft-mirror](https://github.com/meteor-velocity/node-soft-mirror)
+This framework uses the [node-soft-mirror](https://github.com/meteor-velocity/node-soft-mirror)
 and a headless PhantomJS using [xolvio:webdriver](https://github.com/xolvio/meteor-webdriver).
 Check out the speed on this baby!!!
 
