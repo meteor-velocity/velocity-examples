@@ -4,13 +4,14 @@
 
   module.exports = function () {
 
-    var library = this;
+    var herlper = this;
 
-    library.Before(function () {
-      var next = arguments[arguments.length - 1];
-      library.browser.
+    this.Before(function () {
+      var world = herlper.world;
+      var next = arguments[arguments.length-1];
+      world.browser.
         init().
-        url(library.cucumber.mirror.rootUrl + 'fixtures/resetPlayers').
+        url(world.cucumber.mirror.rootUrl + 'fixtures/resetPlayers').
         getText('//pre', function (e, v) {
           if (v !== 'undefined' && JSON.parse(v).status === 'OK') {
             next();
@@ -20,11 +21,14 @@
         });
     });
 
-    library.After(function () {
-      var next = arguments[arguments.length - 1];
-      library.browser.
+    this.After(function () {
+      var world = herlper.world;
+      var next = arguments[arguments.length-1];
+      world.browser.
         end().
-        call(next);
+        call(function() {
+          next();
+        });
     });
 
   };
