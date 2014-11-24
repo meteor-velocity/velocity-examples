@@ -6,32 +6,31 @@ Players = new Meteor.Collection("players");
 if (Meteor.isClient) {
   Meteor.subscribe('players');
 
-  Template.leaderboard.players = function () {
-    return Players.find({}, {sort: {score: -1, name: 1}});
-  };
+  Template.leaderboard.helpers({
+    players: function(){
+      return Players.find({}, {sort: {score: -1, name: 1}});
+    },
+    selected_name: function () {
+      var player = Players.findOne(Session.get("selected_player"));
+      return player && player.name;
+    },
+    selected: function () {
+      return Session.equals("selected_player", this._id) ? "selected" : '';
+    },
+  });
 
-  Template.leaderboard.selected_name = function () {
-    var player = Players.findOne(Session.get("selected_player"));
-    return player && player.name;
-  };
-
-  Template.player.selected = function () {
-    return Session.equals("selected_player", this._id) ? "selected" : '';
-  };
 
   Template.leaderboard.events({
     'click input.inc': function () {
       Players.update(Session.get("selected_player"), {$inc: {score: 5}});
-    }
-  });
-
-  Template.player.events({
+    },
     'click': function () {
       Session.set("selected_player", this._id);
     }
   });
 
-  UI.body.events({
+
+  Template.body.events({
     'click #startRunnerButton':function(){
       Meteor.call('startRunner', function(error,result){
         console.log('error',error);

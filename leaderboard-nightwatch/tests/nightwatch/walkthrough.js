@@ -39,18 +39,18 @@ module.exports = {
       .verify.containsText('div.leaderboard div:nth-child(2) .name', 'Grace Hopper')
       .verify.containsText('div.leaderboard div:nth-child(2) .score', '45')
 
+      .click('div.leaderboard div:nth-child(2)').pause(200)
       .click('input.inc')
       .verify.containsText('div.leaderboard div:nth-child(2) .name', 'Grace Hopper')
       .verify.containsText('div.leaderboard div:nth-child(2) .score', '50')
 
+      .click('div.leaderboard div:nth-child(2)').pause(200)
       .click('input.inc')
       .verify.containsText('div.leaderboard div:nth-child(1) .name', 'Grace Hopper')
       .verify.containsText('div.leaderboard div:nth-child(1) .score', '55')
 
       .verify.containsText('div.leaderboard div:nth-child(2) .name', 'Ada Lovelace')
       .verify.containsText('div.leaderboard div:nth-child(2) .score', '50')
-
-      //.setValue('input[type=text]', 'nightwatch')
 
       .end();
 
