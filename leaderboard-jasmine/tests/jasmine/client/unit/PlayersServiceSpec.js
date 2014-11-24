@@ -1,15 +1,6 @@
 describe('PlayersService', function () {
   'use strict';
 
-  beforeEach(function () {
-    MeteorStubs.install();
-    mock(window, 'Players');
-  });
-
-  afterEach(function () {
-    MeteorStubs.uninstall();
-  });
-
   describe('getPlayerList', function () {
     it('should ask for the players in primarily in descending score order, then in alphabetical order and return them', function () {
       var result = {};
