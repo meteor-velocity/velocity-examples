@@ -4,31 +4,38 @@
 
   module.exports = function () {
 
-    var herlper = this;
+    var helper = this;
 
     this.Before(function () {
-      var world = herlper.world;
-      var next = arguments[arguments.length-1];
+      var world = helper.world;
+      var next = arguments[arguments.length - 1];
       world.browser.
         init().
-        url(world.cucumber.mirror.rootUrl + 'fixtures/resetPlayers').
-        getText('//pre', function (e, v) {
-          if (v !== 'undefined' && JSON.parse(v).status === 'OK') {
-            next();
-          } else {
-            next.fail('Response from reset was ' + v.status ? v.status : v);
-          }
+        call(function() {
+          _resetPlayers(next);
         });
     });
 
     this.After(function () {
-      var world = herlper.world;
-      var next = arguments[arguments.length-1];
+      var world = helper.world;
+      var next = arguments[arguments.length - 1];
       world.browser.
         end().
-        call(function() {
+        call(function () {
           next();
         });
+    });
+
+    var _resetPlayers = Meteor.bindEnvironment(function(next) {
+      var connection = DDP.connect(helper.world.cucumber.mirror.host);
+      connection.call('/fixtures/resetPlayers', function(err) {
+        if (err) {
+          next.fail('Error in /fixtures/resetPlayers DDP call to ' + helper.world.cucumber.mirror.host, err);
+        } else {
+          next();
+        }
+        connection.disconnect();
+      });
     });
 
   };

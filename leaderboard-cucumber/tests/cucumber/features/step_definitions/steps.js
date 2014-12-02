@@ -17,6 +17,22 @@
         call(next);
     });
 
+    this.Given(/^"([^"]*)" has a score of (\d+)$/, function (playerName, score, next) {
+
+      var world = helper.world;
+
+      var connection = DDP.connect(world.cucumber.mirror.host);
+      connection.call('/fixtures/setPlayerScore', playerName, score, function(err, res) {
+        if (err) {
+          next.fail('Error in /fixtures/setPlayerScore DDP call to ' + world.cucumber.mirror.host, err);
+        } else {
+          next();
+        }
+        connection.disconnect();
+      });
+
+    });
+
     this.When(/^I click on "([^"]*)"$/, function (playerName, next) {
       var world = helper.world;
       world.browser.
@@ -29,10 +45,13 @@
       world.browser.
         waitForVisible('button.inc').
         click('button.inc').
-        call(next);
+        call(function() {
+          //next();
+          setTimeout(next, 2000);
+        });
     });
 
-    this.Then(/^"([^"]*)" has a score of (\d+)$/, function (playerName, expectedScore, next) {
+    this.Given(/^"([^"]*)" will have a score of (\d+)$/, function (playerName, expectedScore, next) {
       var world = helper.world;
       world.browser.
         getText(playerScoreXpath.replace('@playerName', playerName), function (error, actualScore) {

@@ -5,7 +5,5 @@
 
 standard-app-packages
 insecure
-meteorclub:rester
 xolvio:cucumber
 xolvio:webdriver
-velocity:core

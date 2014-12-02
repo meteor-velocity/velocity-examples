@@ -13,17 +13,20 @@
       world.cucumber = Package['xolvio:cucumber'].cucumber;
       world.wdio = Package['xolvio:webdriver'].wdio;
 
-      world.wdio.getGhostDriver({
+      var options = {
         desiredCapabilities: {browserName: 'PhantomJs'},
-        port: 4444,
+        port: process.env.PHANTOM_WD_PORT,
         logLevel: 'silent'
-      }, function (browser) {
+      };
+
+      world.wdio.getGhostDriver(options, function (browser) {
         world.browser = browser;
-        world.browser.call(next);
+        browser.call(next);
       });
 
     };
 
   };
+
 
 })();

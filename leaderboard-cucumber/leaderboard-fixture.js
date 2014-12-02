@@ -23,6 +23,12 @@
       }
     });
 
+    Meteor.methods({
+      '/fixtures/setPlayerScore': function (name, score) {
+        Players.update({name: name}, {$set: {score: parseInt(score)}});
+      }
+    });
+
   }
 
 })();
