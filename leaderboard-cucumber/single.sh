@@ -1,3 +1,5 @@
 #!/bin/sh
-cd ~/WebstormProjects/meteor-testing/velocity-examples/leaderboard-cucumber
-SINGLE=1 PHANTOM_WD_PORT=4446 meteor --port 3005
+PORT=30
+MASTER_URL=http://localhost:30$PORT
+MONGO_URL=mongodb://meteor@127.0.0.1:3001/db$PORT
+MASTER_URL=$MASTER_URL SINGLE=1 PHANTOM_WD_PORT=44$PORT MONGO_URL=$MONGO_URL meteor --port 30$PORT
