@@ -30,7 +30,7 @@ livedata@1.0.11
 logging@1.0.5
 meteor-platform@1.2.0
 meteor@1.1.3
-mike:mocha@0.4.6
+mike:mocha@0.4.7
 minifiers@1.1.2
 minimongo@1.0.5
 mobile-status-bar@1.0.1
@@ -54,7 +54,7 @@ underscore@1.0.1
 url@1.0.2
 velocity:core@0.4.1
 velocity:html-reporter@0.3.1
-velocity:node-soft-mirror@0.0.9
+velocity:node-soft-mirror@0.0.12
 velocity:shim@0.1.0
 velocity:test-proxy@0.0.4
 webapp-hashing@1.0.1
