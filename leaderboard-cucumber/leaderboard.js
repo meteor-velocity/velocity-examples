@@ -9,10 +9,6 @@ Players = new Mongo.Collection('players');
 
   if (Meteor.isClient) {
 
-    Meteor.call('title', function(err, res) {
-      document.title = res;
-    });
-
     Template.leaderboard.helpers({
       players: function () {
         return Players.find({}, {sort: {score: -1, name: 1}});
@@ -46,12 +42,6 @@ Players = new Mongo.Collection('players');
   if (Meteor.isServer) {
 
     Meteor.startup(function () {
-
-      Meteor.methods({
-        'title' : function() {
-          return process.env.MASTER?'Master':'Single';
-        }
-      });
 
       if (Players.find().count() === 0) {
         var names = ['Ada Lovelace', 'Grace Hopper', 'Marie Curie',

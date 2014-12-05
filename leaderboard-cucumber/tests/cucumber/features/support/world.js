@@ -15,7 +15,7 @@
 
       var options = {
         desiredCapabilities: {browserName: 'PhantomJs'},
-        port: process.env.PHANTOM_WD_PORT,
+        port: 4444,
         logLevel: 'silent'
       };
 
@@ -23,6 +23,7 @@
         world.browser = browser;
         browser.call(next);
       });
+
 
     };
 
