@@ -45,10 +45,7 @@
       world.browser.
         waitForVisible('button.inc').
         click('button.inc').
-        call(function() {
-          //next();
-          setTimeout(next, 2000);
-        });
+        call(next);
     });
 
     this.Given(/^"([^"]*)" will have a score of (\d+)$/, function (playerName, expectedScore, next) {
