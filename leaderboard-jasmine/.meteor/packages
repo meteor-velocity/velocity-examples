@@ -8,5 +8,11 @@ autopublish
 insecure
 mrt:moment@2.8.1
 sanjo:jasmine
+<<<<<<< HEAD:leaderboard-jasmine/.meteor/packages
 velocity:html-reporter
+=======
+velocity:core
+clinical:nightwatch
+clinical-nightwatch
+>>>>>>> ea5979cfd569f289c001b3cae690fb114a61658e:.meteor/packages
 

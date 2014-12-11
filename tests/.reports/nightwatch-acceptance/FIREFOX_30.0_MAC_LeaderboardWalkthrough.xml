@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="LeaderboardWalkthrough"
+             errors="0"
+             failures="10"
+             tests="27">
+  
+  <testsuite errors="0" failures="10" hostname="" id=""
+    name="Leaderboard Test" package="LeaderboardWalkthrough" skipped="0"
+    tests="27" time="" timestamp="">
+    
+    
+      <testcase name="Element &lt;body&gt; was visible after 264 milliseconds.">
+        
+        
+      </testcase>
+    
+      <testcase name="Element &lt;div#outer&gt; was visible after 27 milliseconds.">
+        
+        
+      </testcase>
+    
+      <testcase name="Element &lt;div.leaderboard&gt; was visible after 33 milliseconds.">
+        
+        
+      </testcase>
+    
+      <testcase name="Element &lt;.leaderboard .player&gt; was visible after 30 milliseconds.">
+        
+        
+      </testcase>
+    
+      <testcase name="Testing if element &lt;div.leaderboard div:nth-child(1) .name&gt; contains text: &quot;Ada Lovelace&quot;.">
+        
+          <failure message="Expected &quot;Ada Lovelace&quot; but got: &quot;Grace Hopper&quot;"></failure>
+        
+        
+      </testcase>
+    
+      <testcase name="Testing if element &lt;div.leaderboard div:nth-child(1) .score&gt; contains text: &quot;50&quot;.">
+        
+          <failure message="Expected &quot;50&quot; but got: &quot;85&quot;"></failure>
+        
+        
+      </testcase>
+    
+      <testcase name="Testing if element &lt;div.leaderboard div:nth-child(2) .name&gt; contains text: &quot;Grace Hopper&quot;.">
+        
+          <failure message="Expected &quot;Grace Hopper&quot; but got: &quot;Ada Lovelace&quot;"></failure>
+        
+        
+      </testcase>
+    
+      <testcase name="Testing if element &lt;div.leaderboard div:nth-child(2) .score&gt; contains text: &quot;40&quot;.">
+        
+          <failure message="Expected &quot;40&quot; but got: &quot;80&quot;"></failure>
+        
+        
+      </testcase>
+    
+      <testcase name="Testing if element &lt;div.leaderboard div:nth-child(3) .name&gt; contains text: &quot;Claude Shannon&quot;.">
+        
+        
+      </testcase>
+    
+      <testcase name="Testing if element &lt;div.leaderboard div:nth-child(3) .score&gt; contains text: &quot;35&quot;.">
+        
+        
+      </testcase>
+    
+      <testcase name="Testing if element &lt;div.leaderboard div:nth-child(4) .name&gt; contains text: &quot;Nikola Tesla&quot;.">
+        
+        
+      </testcase>
+    
+      <testcase name="Testing if element &lt;div.leaderboard div:nth-child(4) .score&gt; contains text: &quot;25&quot;.">
+        
+        
+      </testcase>
+    
+      <testcase name="Testing if element &lt;div.leaderboard div:nth-child(5) .name&gt; contains text: &quot;Marie Curie&quot;.">
+        
+        
+      </testcase>
+    
+      <testcase name="Testing if element &lt;div.leaderboard div:nth-child(5) .score&gt; contains text: &quot;20&quot;.">
+        
+        
+      </testcase>
+    
+      <testcase name="Testing if element &lt;div.leaderboard div:nth-child(6) .name&gt; contains text: &quot;Carl Friedrich Gauss&quot;.">
+        
+        
+      </testcase>
+    
+      <testcase name="Testing if element &lt;div.leaderboard div:nth-child(6) .score&gt; contains text: &quot;5&quot;.">
+        
+        
+      </testcase>
+    
+      <testcase name="Testing if element &lt;.none&gt; contains text: &quot;Click a player to select&quot;.">
+        
+        
+      </testcase>
+    
+      <testcase name="Element &lt;input.inc&gt; was visible after 24 milliseconds.">
+        
+        
+      </testcase>
+    
+      <testcase name="Testing if attribute value of &lt;input.inc&gt; equals &quot;Give 5 points&quot;.">
+        
+        
+      </testcase>
+    
+      <testcase name="Testing if element &lt;div.leaderboard div:nth-child(2) .name&gt; contains text: &quot;Grace Hopper&quot;.">
+        
+        
+      </testcase>
+    
+      <testcase name="Testing if element &lt;div.leaderboard div:nth-child(2) .score&gt; contains text: &quot;45&quot;.">
+        
+          <failure message="Expected &quot;45&quot; but got: &quot;85&quot;"></failure>
+        
+        
+      </testcase>
+    
+      <testcase name="Testing if element &lt;div.leaderboard div:nth-child(2) .name&gt; contains text: &quot;Grace Hopper&quot;.">
+        
+        
+      </testcase>
+    
+      <testcase name="Testing if element &lt;div.leaderboard div:nth-child(2) .score&gt; contains text: &quot;50&quot;.">
+        
+          <failure message="Expected &quot;50&quot; but got: &quot;85&quot;"></failure>
+        
+        
+      </testcase>
+    
+      <testcase name="Testing if element &lt;div.leaderboard div:nth-child(1) .name&gt; contains text: &quot;Grace Hopper&quot;.">
+        
+          <failure message="Expected &quot;Grace Hopper&quot; but got: &quot;Ada Lovelace&quot;"></failure>
+        
+        
+      </testcase>
+    
+      <testcase name="Testing if element &lt;div.leaderboard div:nth-child(1) .score&gt; contains text: &quot;55&quot;.">
+        
+          <failure message="Expected &quot;55&quot; but got: &quot;95&quot;"></failure>
+        
+        
+      </testcase>
+    
+      <testcase name="Testing if element &lt;div.leaderboard div:nth-child(2) .name&gt; contains text: &quot;Ada Lovelace&quot;.">
+        
+          <failure message="Expected &quot;Ada Lovelace&quot; but got: &quot;Grace Hopper&quot;"></failure>
+        
+        
+      </testcase>
+    
+      <testcase name="Testing if element &lt;div.leaderboard div:nth-child(2) .score&gt; contains text: &quot;50&quot;.">
+        
+          <failure message="Expected &quot;50&quot; but got: &quot;85&quot;"></failure>
+        
+        
+      </testcase>
+    
+    
+    </testsuite>
+  
+</testsuites>
