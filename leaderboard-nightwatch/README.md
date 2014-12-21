@@ -11,8 +11,16 @@ Meteor@1.0
 ======================================
 ####  Requirements  
 
-  - Meteor
-  - Firefox
+  - [Meteor](https://www.meteor.com/install)  
+  - [Firefox](https://www.mozilla.org/en-US/firefox/new/)  
+  - [Java for OSX](http://support.apple.com/kb/DL1572)  
+
+Some people have reported needing to install OpenJDK or NodeJS.  If you're running on Linux, you may need the following packages as well.  
+
+````sh
+$ sudo apt-get install nodejs
+$ sudo apt-get install openjdk-7
+````
 
 ======================================
 ####  Installation of Leaderboard Example
@@ -25,15 +33,7 @@ terminal-a$ cd velocity-examples/leaderboard-nightwatch
 # run the leaderboard application
 terminal-a$ meteor
 
-# and then we want to open up a new terminal and run nightwatch
-# (this is similar to running 'meteor mongo' in a separate terminal)
-terminal-b$ ./run_nightwatch.sh
-
-# or specify a specific test with the -t flag
-terminal-b$ ./run_nightwatch.sh -t tests/nightwatch/walkthrough.js
-
-# if you want to rerun the acceptance tests, go back to the first terminal
-# and be sure to reset the database
+# you may want to occassionally reset the database
 terminal-a$ ctrl-c
 terminal-a$ meteor reset
 terminal-a$ meteor

@@ -8,7 +8,7 @@ blaze@2.0.3
 boilerplate-generator@1.0.1
 callback-hook@1.0.1
 check@1.0.2
-clinical:nightwatch@1.4.0
+clinical:nightwatch@1.5.0
 ctl-helper@1.0.4
 ctl@1.0.2
 ddp@1.0.11
@@ -53,8 +53,8 @@ tracker@1.0.3
 ui@1.0.4
 underscore@1.0.1
 url@1.0.2
-velocity:core@0.3.1
-velocity:html-reporter@0.3.1
-velocity:nightwatch-framework@0.2.10
+velocity:core@0.4.3
+velocity:html-reporter@0.3.2
+velocity:nightwatch-framework@0.3.4
 webapp-hashing@1.0.1
 webapp@1.1.4

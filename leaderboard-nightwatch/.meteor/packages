@@ -7,4 +7,5 @@ standard-app-packages
 insecure
 tinytest
 velocity:html-reporter
-velocity:nightwatch-framework@0.2.10
+velocity:nightwatch-framework@0.3.4
+clinical:nightwatch
