@@ -5,7 +5,7 @@ This is an example application demonstrating the use of the [meteor-robotframewo
 
 ### Installation
 
-Please refer to the [installation pre-requisites](https://github.com/rjsmith/meteor-robotframework#installation) for meteor-robotframework.  You must have a working installation of Robot Framework (python - based) on your machine, and appropriate webdriver executables.  By default, leaderboard-robotframework will try and use the 'PhantomJS' webdriver (see the `${BROWSER}` variable assignment in the [leaderboard-resources](suites/leaderboard-resources.txt) file)
+Please refer to the [installation pre-requisites](https://github.com/rjsmith/meteor-robotframework#installation) for meteor-robotframework.  You must have a working installation of Robot Framework (python - based) on your machine, and appropriate webdriver executables.  By default, leaderboard-robotframework will try and use the 'PhantomJS' webdriver (see the `${BROWSER}` variable assignment in the [leaderboard-resources](tests/robotframework/suites/leaderboard-resources.txt) file)
 
 Then:
 
@@ -25,9 +25,9 @@ As this is a demonstration application, it is highly recommended that you switch
 RF_DEBUG=1 meteor
 ```
 
-Open the local file `tests/robotframework/.logs/report.html` file in a new browser sesison to view the generated Robot Framework test report.  Unfortunately, this is not built using Meteor, so you will have to use the good-old F5 key to refresh on every run.
+Open the local file `tests/robotframework/.logs/report.html` file in a new browser session to view the generated Robot Framework test report.  Unfortunately, this is not built using Meteor, so you will have to use the good-old F5 key to refresh on every run.
 
-You could also uncomment the `--debugfile  debug.txt` line in the tests/robotframework/arguments.txt file and monitor it in realtime to see more detailed Robot Framework - generated debug logging in another console window:
+You could also uncomment the `--debugfile  debug.txt` line in the [arguments.txt](tests/robotframework/arguments.txt) file and monitor it in realtime to see more detailed Robot Framework - generated debug logging in another console window:
 
 ```bash
 cd tests/robotframework/.logs
