@@ -40,8 +40,12 @@ $ tail -f debug.txt
 
 2. Examples of [scripting - style](tests/robotframework/suites/leaderboard.txt#L11) and [BDD - style](tests/robotframework/suites/leaderboard.txt#L14) test cases.
 
-3. Using [xpath and css element location selectors](tests/robotframework/suites/leaderboard-resources.txt) (thanks to meteor-cucumber for providing the xpath expressions!)
+3. Using [xpath and css element location selectors](tests/robotframework/suites/leaderboard-resources.txt#L14) (thanks to meteor-cucumber for providing the xpath expressions!)
 
 4. [De-composing and layering resource files](tests/robotframework/suites/selenium-resources.txt) to promote re-use and keeping the tests [DRY](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself).
 
-5. Using [other Robot Framework libraries](tests/robotframework/suites/leaderboard-resources.txt#L43) to provide additional test functionality.
+5. Using [other Robot Framework libraries](tests/robotframework/suites/leaderboard-resources.txt#L43) to provide additional test functionality.  Take a look at the [list of libraries included in the Robot Framework distribution here](http://robotframework.org/robotframework/#standard-libraries), all of which could potentially be used in a meteor-robotframework test.  Plus, any of the many other third-party libraries out there (your search engine is your friend)
+
+### Acknowledgements
+
+The example BDD - style test and associated fixture code were copied from the leaderboard-cucumber example.
