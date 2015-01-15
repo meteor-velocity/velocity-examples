@@ -13,6 +13,6 @@
 # Uncomment to run subset of tests based on test tags
 #--include  velocity-tests
 
-# Uncomment to generate RF debug file.
---debugfile  debug.txt
+# Uncomment to generate RF debug file in 'tests/robotframework/.logs'
+#--debugfile  debug.txt
 
