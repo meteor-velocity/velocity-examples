@@ -1,8 +1,12 @@
 *** Settings ***
-Documentation  Example Robot Framework client plain text format test file
-Resource       leaderboard-resources.txt
-Test Setup     Setup Leaderboard Application
-Test Teardown  Teardown Leaderboard Application
+Documentation   Example Robot Framework client plain text format test file
+Resource        leaderboard-resources.txt
+# Whenever possible, use same selenium browser session for multiple tests
+# Speeds up test execution by x2 - x4 times.
+Suite Setup     Open Leaderboard Client Session
+Suite Teardown  Close All Leaderboard Client Sessions
+# Reset application state (but keep same browser session) before each Test Case.
+Test Setup      Reset Leaderboard Application State
 
 *** Variables ***
 ${TITLE}  Leaderboard
