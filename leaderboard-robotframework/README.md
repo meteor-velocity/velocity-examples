@@ -38,13 +38,13 @@ $ tail -f debug.txt
 
 1. Using client-side [javascript code](leaderboard-fixture.js#L43) invoked from [user keywords](tests/robotframework/suites/leaderboard-resources.txt#L38) using Selenium2Library's [Execute Javascript](http://rtomac.github.io/robotframework-selenium2library/doc/Selenium2Library.html#Execute%20Javascript) and [Execute Async Javascript](http://rtomac.github.io/robotframework-selenium2library/doc/Selenium2Library.html#Execute%20Async%20Javascript) keywords
 
-2. Examples of [scripting - style](tests/robotframework/suites/leaderboard.txt#L11) and [BDD - style](tests/robotframework/suites/leaderboard.txt#L14) test cases.
+2. Examples of [scripting - style](tests/robotframework/suites/leaderboard.txt#L15) and [BDD - style](tests/robotframework/suites/leaderboard.txt#L18) test cases.
 
 3. Using [xpath and css element location selectors](tests/robotframework/suites/leaderboard-resources.txt#L14) (thanks to meteor-cucumber for providing the xpath expressions!)
 
 4. [De-composing and layering resource files](tests/robotframework/suites/selenium-resources.txt) to promote re-use and keeping the tests [DRY](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself).
 
-5. Using [other Robot Framework libraries](tests/robotframework/suites/leaderboard-resources.txt#L43) to provide additional test functionality.  Take a look at the [list of libraries included in the Robot Framework distribution here](http://robotframework.org/robotframework/#standard-libraries), all of which could potentially be used in a meteor-robotframework test.  Plus, any of the many other third-party libraries out there (your search engine is your friend)
+5. Using [other Robot Framework libraries](tests/robotframework/suites/leaderboard-resources.txt#L44) to provide additional test functionality.  Take a look at the [list of libraries included in the Robot Framework distribution here](http://robotframework.org/robotframework/#standard-libraries), all of which could potentially be used in a meteor-robotframework test.  Plus, any of the many other third-party libraries out there (your search engine is your friend)
 
 ### Acknowledgements
 
