@@ -30,6 +30,15 @@ $ cd leaderboard-nightwatch
 $ meteor
 ```
 
+#### For Robot Framework:
+
+Install [external pre-requisites](https://github.com/rjsmith/meteor-robotframework#installation) first.  Then:
+
+```sh
+$ cd leaderboard-robotframework
+$ meteor
+```
+
 =======
 ### Included Test Frameworks
 
@@ -39,7 +48,7 @@ The `velocity` package coordinates between test frameworks and provides a common
 * [jasmine-unit](https://github.com/xolvio/jasmine-unit) - Runs jasmine unit tests out of the Meteor context.  Fast and good for smaller unit tests.
 * [jasmine](https://github.com/Sanjo/meteor-jasmine) - run jasmine tests in the Meteor context - great for integration testing.
 * [clinical-nightwatch](https://github.com/awatson1978/clinical-nightwatch.js) - run Selenium automated browser tests with the Nightwatch bridge.  Good for end-to-end tests and acceptance tests.
-
+* [meteor-robotframework](https://github.com/rjsmith/meteor-robotframework) - run Robot Framework end-to-end tests.
 
 
 ### Tutorials
@@ -50,3 +59,5 @@ The `velocity` package coordinates between test frameworks and provides a common
 
 
 https://hackpad.com/Nightwatch-Discussion-HP8M8n3iDM4  
+
+[Introduction to meteor-robotframework](http://youtu.be/90dX3QD7dYo) (Youtube)
