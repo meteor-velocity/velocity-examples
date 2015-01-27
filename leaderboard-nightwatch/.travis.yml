@@ -1,8 +1,4 @@
-# this travis.yml file is for the entire velocity-examples repository
-# other frameworks should feel free to add items to the before_install script
-# and we may want to clone the ./run_nightwatch.sh script and add it back
-# into the root of the velocity-examples repository for meta-testing
-
+# this travis.yml file is for the leaderboard-nightwatch example, when run standalone
 language: node_js
 
 node_js:
@@ -13,8 +9,8 @@ services:
 
 cache:
   directories:
-    - leaderboard-nightwatch/.meteor/local/build/programs/server/assets/packages
-    - ~/.meteor
+    - .meteor/local/build/programs/server/assets/packages
+    - .meteor
 #    - node_modules
 #    - webapp/node_modules
 
@@ -31,7 +27,7 @@ before_install:
   # install meteor
   - "curl https://install.meteor.com | /bin/sh"
   # setup Meteor app
-  - "cd leaderboard-nightwatch"
+  - "cd webapp"
     # Optionally we can update all our dependencies here
     #- "meteor update"
   - "meteor reset"
