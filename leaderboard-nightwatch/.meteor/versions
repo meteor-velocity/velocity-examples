@@ -55,6 +55,6 @@ underscore@1.0.1
 url@1.0.2
 velocity:core@0.4.5
 velocity:html-reporter@0.3.2
-velocity:nightwatch-framework@0.3.4
+velocity:nightwatch-framework@0.3.5
 webapp-hashing@1.0.1
 webapp@1.1.4
