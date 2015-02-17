@@ -6,7 +6,7 @@ Ultra simple acceptance testing for Meteor, using [Nightwatch.js](http://nightwa
 ======================================
 ####  Version  
 
-Meteor@1.0
+Meteor@1.0.3.1
 
 ======================================
 ####  Requirements  
