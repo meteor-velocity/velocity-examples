@@ -1,4 +1,3 @@
 .reports
-.logs
 tests/nightwatch/.logs
 tests/.reports
