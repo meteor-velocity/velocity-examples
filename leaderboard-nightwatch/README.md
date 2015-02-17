@@ -1,7 +1,7 @@
 leaderboard-nightwatch
 ======================
 
-Ultra simple acceptance testing for Meteor, using [Nightwatch.js](http://nightwatchjs.org/) and [Selenium](http://www.seleniumhq.org/);
+Ultra simple acceptance testing for Meteor, using [Nightwatch.js](http://nightwatchjs.org/) and [Selenium](http://www.seleniumhq.org/).
 
 ======================================
 ####  Version  
