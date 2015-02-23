@@ -53,7 +53,7 @@ if (!(typeof MochaWeb === 'undefined')){
     
     describe("Player Ordering", function(){
       it("should result in a list where the first player as many or more points than the second player", function(){
-        var players = Template.leaderboard.__helpers[' players']().fetch();
+        var players = orderedPlayers().fetch();
         chai.assert(players[0].score >= players[1].score);
       });
     });

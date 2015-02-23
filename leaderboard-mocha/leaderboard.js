@@ -3,15 +3,13 @@
 
 Players = new Mongo.Collection("players");
 
-selectedPlayers = function () {
-  return Session.equals("selectedPlayer", this._id) ? "selected" : '';
+orderedPlayers= function () {
+  return Players.find({}, { sort: { score: -1, name: 1 } });
 };
 
 if (Meteor.isClient) {
   Template.leaderboard.helpers({
-    players: function () {
-      return Players.find({}, { sort: { score: -1, name: 1 } });
-    },
+    players: orderedPlayers,
     selectedName: function () {
       var player = Players.findOne(Session.get("selectedPlayer"));
       return player && player.name;
@@ -25,7 +23,9 @@ if (Meteor.isClient) {
   });
 
   Template.player.helpers({
-    selected: selectedPlayers
+    selected: function () {
+      return Session.equals("selectedPlayer", this._id) ? "selected" : '';
+    }
   });
 
   Template.player.events({
