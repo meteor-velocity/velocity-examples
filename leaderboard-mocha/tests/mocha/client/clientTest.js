@@ -7,11 +7,11 @@
 if (!(typeof MochaWeb === 'undefined')){
   MochaWeb.testOnly(function(){
     var selectGraceHopper = function(){
-      Session.set("selected_player", Players.findOne({name: "Grace Hopper"})._id);
+      Session.set("selectedPlayer", Players.findOne({name: "Grace Hopper"})._id);
     };
 
     var unselectPlayer = function(){
-      Session.set("selected_player", null);
+      Session.set("selectedPlayer", null);
       Meteor.flush();
     }
 
@@ -46,17 +46,17 @@ if (!(typeof MochaWeb === 'undefined')){
 
       it("should give a player 5 points when they are selected and the button is pressed", function(){
         var graceInitialPoints = Players.findOne({name: "Grace Hopper"}).score;
-        $("input:button").click();
+        $("button.inc").click();
         chai.assert.equal(graceInitialPoints + 5, Players.findOne({name: "Grace Hopper"}).score);
       });
     });
     
     describe("Player Ordering", function(){
       it("should result in a list where the first player as many or more points than the second player", function(){
-        var players = Template.leaderboard.players().fetch();
+        var players = orderedPlayers().fetch();
         chai.assert(players[0].score >= players[1].score);
       });
-    })
+    });
   });
 }
 
