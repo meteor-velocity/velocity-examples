@@ -14,13 +14,11 @@ Meteor@1.0.3.1
 
 
 ======================================
-####  Requirements  
+####  Installation  
 
-- Installation
-  - [Meteor](https://www.meteor.com/install)  
-  - [Firefox](https://www.mozilla.org/en-US/firefox/new/)  
-  - [Java for OSX](http://support.apple.com/kb/DL1572)  
-- [Writing Acceptance Tests With Nightwatch](https://github.com/awatson1978/meteor-cookbook/blob/master/cookbook/writing.acceptance.test.md)  
+- [Meteor](https://www.meteor.com/install)  
+- [Firefox](https://www.mozilla.org/en-US/firefox/new/)  
+- [Java for OSX](http://support.apple.com/kb/DL1572)  
 
 
 ======================================
@@ -40,6 +38,10 @@ meteor reset
 meteor
 ````
 
+======================================
+#### Writing Acceptance Tests  
+
+- [Writing Acceptance Tests With Nightwatch](https://github.com/awatson1978/meteor-cookbook/blob/master/cookbook/writing.acceptance.test.md)  
 
 ======================================
 #### Licensing  
