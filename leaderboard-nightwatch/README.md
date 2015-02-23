@@ -39,7 +39,7 @@ meteor
 ````
 
 ======================================
-#### Writing Acceptance Tests  
+#### Extending The Tests  
 
 - [Writing Acceptance Tests With Nightwatch](https://github.com/awatson1978/meteor-cookbook/blob/master/cookbook/writing.acceptance.test.md)  
 
