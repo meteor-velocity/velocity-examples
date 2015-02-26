@@ -1,0 +1,40 @@
+*** Settings ***
+Documentation   Example Robot Framework client plain text format test file
+Resource        leaderboard-resources.txt
+# Whenever possible, use same selenium browser session for multiple tests
+# Speeds up test execution by x2 - x4 times.
+Suite Setup     Open Leaderboard Client Session
+Suite Teardown  Close All Leaderboard Client Sessions
+# Reset application state (but keep same browser session) before each Test Case.
+Test Setup      Reset Leaderboard Application State
+
+*** Variables ***
+${TITLE}  Leaderboard
+
+*** Test Cases ***
+Test Home Page Can Open
+  Home Page Should Be Open  ${TITLE}
+
+Give 5 Points To A Player
+  # Example test using BDD - like syntax
+  Given I'm on the home page
+  And "Grace Hopper" has a score of 50
+  When I click on "Grace Hopper"
+  And I click add five points
+  Then "Grace Hopper" will have a score of 55
+
+*** Keywords ***
+I'm on the home page
+  Home Page Should Be Open  ${TITLE}
+
+"${personName}" has a score of ${score}
+  Set Player Score  ${personName}  ${score}
+
+I click on "${playerName}"
+  Select Player  ${playerName}
+
+I click add five points
+  Add Points To Selected Player
+
+"${playerName}" will have a score of ${expectedScore}
+  Check Score Of Player  ${playerName}  ${expectedScore}
