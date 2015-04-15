@@ -37,22 +37,27 @@ PlayersService = {
 };
 
 if (Meteor.isClient) {
-  Template.leaderboard.players = function () {
-    return PlayersService.getPlayerList();
-  };
+  Template.leaderboard.helpers({
+    players: function () {
+      return PlayersService.getPlayerList();
+    },
 
-  Template.leaderboard.selected_name = function () {
-    var player = PlayersService.getPlayer(Session.get("selected_player"));
-    return player && player.name;
-  };
-
-  Template.player.selected = function () {
-    return Session.equals("selected_player", this._id) ? "selected" : '';
-  };
+    selected_name: function () {
+      var player = PlayersService.getPlayer(Session.get("selected_player"));
+      return player && player.name;
+    }
+  });
 
   Template.leaderboard.events({
     'click input.inc': function () {
       PlayersService.rewardPlayer(Session.get("selected_player"));
+    }
+  });
+
+
+  Template.player.helpers({
+    selected: function () {
+      return Session.equals("selected_player", this._id) ? "selected" : '';
     }
   });
 
