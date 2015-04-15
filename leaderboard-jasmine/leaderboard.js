@@ -67,42 +67,11 @@ if (Meteor.isClient) {
 if (Meteor.isServer) {
   Meteor.startup(function () {
     if (!PlayersService.playersExist()) {
-      //this works
-      //PlayersService.generateRandomPlayers();
-
-      //however, to get a consistent Nightwatch walkthrough
-      //we need to be more specific about our players
-      Meteor.publish('players', function(){
-        return Players.find();
-      });
-      if (Players.find().count() === 0) {
-        Players.insert({
-          name: 'Ada Lovelace',
-          score: 50
-        });
-        Players.insert({
-          name: 'Grace Hopper',
-          score: 40
-        });
-        Players.insert({
-          name: 'Marie Curie',
-          score: 20
-        });
-        Players.insert({
-          name: 'Carl Friedrich Gauss',
-          score: 5
-        });
-        Players.insert({
-          name: 'Nikola Tesla',
-          score: 25
-        });
-        Players.insert({
-          name: 'Claude Shannon',
-          score: 35
-        });
-      }
-
-
+      PlayersService.generateRandomPlayers();
     }
+
+    Meteor.publish('players', function(){
+      return Players.find();
+    });
   });
 }
