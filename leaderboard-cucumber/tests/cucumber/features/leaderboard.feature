@@ -10,5 +10,3 @@ Feature: Player score can be increased manually
     When I click on "Grace Hopper"
     And I click add five points
     Then "Grace Hopper" will have a score of 55
-
-
