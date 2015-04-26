@@ -1,0 +1,18 @@
+# Robot Framework settings file
+# See: http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#argument-files
+# Use this file to set Robot Framework command line options.
+# You cannot override the following command line options:
+#   --outputdir
+#   --variable  MIRROR_URL:
+#   /path/to/tests
+
+# Uncomment line below to set Selenium Chromedriver
+# See: http://chromedriver.storage.googleapis.com/index.html
+#--variable  BROWSER:Chrome
+
+# Uncomment to run subset of tests based on test tags
+#--include  velocity-tests
+
+# Uncomment to generate RF debug file in 'tests/robotframework/.logs'
+#--debugfile  debug.txt
+

@@ -1,0 +1,22 @@
+*** Settings ***
+Documentation  Generic Selenium2Library resources keywords
+Library        Selenium2Library  WITH NAME  selenium
+
+*** Keywords ***
+Run Async Javascript
+  # Helper keyword to execute javascript containing callback code that must be
+  # executed before this keyword should return.
+  # Provided ${code} argument must call 'callback' function on completion, with
+  # or without arguments
+
+  [Arguments]  ${code}
+  ${ret}=  selenium.Execute Async Javascript
+  ...  var callback = arguments[arguments.length - 1];
+  ...  ${code}
+  [Return]  ${ret}
+
+Open Browser To Page
+    [Arguments]  ${url}  ${browzer}
+    selenium.Open Browser    ${url}    ${browzer}
+    selenium.Maximize Browser Window
+    selenium.Set Selenium Speed    ${DELAY}

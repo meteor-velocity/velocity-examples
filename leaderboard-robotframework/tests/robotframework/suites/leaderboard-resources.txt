@@ -1,0 +1,54 @@
+*** Settings ***
+Documentation  Common Web - testing resource user keywords
+Library        Selenium2Library  WITH NAME  selenium
+Library        String
+Resource       selenium-resources.txt
+
+*** Variables ***
+# ${MIRROR_URL} is set by rsbatech:robotframework and should not
+# be overidden in your tests!
+${BROWSER}             PhantomJS
+${DELAY}               0
+${HOME URL}            ${MIRROR_URL}
+#
+${LEADERBOARD_XPATH}   //ol[@class="leaderboard"]
+${PLAYER_XPATH}        ${LEADERBOARD_XPATH}/li/span[contains(text(), "@playerName")]
+${PLAYER_SCORE_XPATH}  /../span[@class="score"]
+
+*** Keywords ***
+Open Leaderboard Client Session
+   selenium-resources.Open Browser To Page  ${HOME_URL}  ${BROWSER}
+
+Close All Leaderboard Client Sessions
+    selenium.Close All Browsers
+
+Reset Leaderboard Application State
+    [Documentation]  Setup starting conditions for each Leaderboard test case
+
+    # Invoke javascript to reset mirror database contents
+    # See leaderboard-fixtures.js
+    ${err}=  selenium-resources.Run Async Javascript  fixtures.resetPlayers(callback);
+    Should Be Equal  ${err}  ${None}  msg=${err}  values=False
+
+Home Page Should Be Open
+    [Arguments]  ${_title}
+    selenium.Title Should Be    ${_title}
+
+Set Player Score
+    [Arguments]  ${playerName}  ${score}
+    ${err}=  selenium-resources.Run Async Javascript  fixtures.setPlayerScore('${playerName}', ${score}, callback);
+    Should Be Equal  ${err}  ${None}  msg=${err}  values=False
+
+Select Player
+    [Arguments]  ${playerName}
+    ${_xpath}=  String.Replace String  ${PLAYER_XPATH}  @playerName  ${playerName}  count=1
+    selenium.Click Element  xpath=${_xpath}
+
+Add Points To Selected Player
+    selenium.Wait Until Page Contains Element  css=button.inc
+    selenium.Click Element  css=button.inc
+
+Check Score Of Player
+    [Arguments]  ${playerName}  ${expectedScore}
+    ${_xpath}=  String.Replace String  ${PLAYER_XPATH}  @playerName  ${playerName}  count=1
+    selenium.Element Text Should Be  xpath=${_xpath}${PLAYER_SCORE_XPATH}  ${expectedScore}
