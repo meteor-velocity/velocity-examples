@@ -14,5 +14,5 @@
 #--include  velocity-tests
 
 # Uncomment to generate RF debug file in 'tests/robotframework/.logs'
-#--debugfile  debug.txt
+--debugfile  debug.txt
 
