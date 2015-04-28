@@ -7,7 +7,7 @@ Run Async Javascript
   # Helper keyword to execute javascript containing callback code that must be
   # executed before this keyword should return.
   # Provided ${code} argument must call 'callback' function on completion, with
-  # or without arguments
+  # or without arguments.
 
   [Arguments]  ${code}
   ${ret}=  selenium.Execute Async Javascript
@@ -16,7 +16,11 @@ Run Async Javascript
   [Return]  ${ret}
 
 Open Browser To Page
-    [Arguments]  ${url}  ${browzer}
-    selenium.Open Browser    ${url}    ${browzer}
+    [Arguments]  ${url}  ${browser}
+    Run Keyword If  '${browser}'=='PhantomJSlocal'  selenium.Open Browser  ${url}  browser=PhantomJS
+    Run Keyword If  '${browser}'=='PhantomJS'  selenium.Create Webdriver  PhantomJS  executable_path=${PHANTOMJS_BINPATH}
+    Run Keyword If  '${browser}'=='Chrome'  selenium.Create Webdriver  Chrome  executable_path=${CHROMEDRIVER_BINPATH}
+    selenium.Go To  ${url}
     selenium.Maximize Browser Window
     selenium.Set Selenium Speed    ${DELAY}
+    selenium.Set Selenium Timeout  4s

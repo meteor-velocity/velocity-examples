@@ -5,7 +5,7 @@ This is an example application demonstrating the use of the [meteor-robotframewo
 
 ### Installation
 
-Please refer to the [installation pre-requisites](https://github.com/rjsmith/meteor-robotframework#installation) for meteor-robotframework.  You must have a working installation of Robot Framework (python - based) on your machine, and appropriate webdriver executables.  By default, leaderboard-robotframework will try and use the 'PhantomJS' webdriver (see the `${BROWSER}` variable assignment in the [leaderboard-resources.txt](tests/robotframework/suites/leaderboard-resources.txt) file)
+Please refer to the [installation pre-requisites](https://github.com/rjsmith/meteor-robotframework#installation) for meteor-robotframework.  You must have a working installation of Robot Framework (python - based) on your machine, and the Selenium2Library RF library.  Note that meteor-robotframework automatically downloads PhantomJS and ChromeDriver executables.
 
 Then:
 
@@ -25,7 +25,7 @@ As this is a demonstration application, it is highly recommended that you switch
 $ RF_DEBUG=1 meteor
 ```
 
-Open the local file `tests/robotframework/.logs/report.html` file in a new browser session to view the generated Robot Framework test report.  Unfortunately, this is not built using Meteor, so you will have to use the good-old F5 key to refresh on every run.
+Open the http://localhost:3000/robotframework/report.html link in a new browser session to view the generated Robot Framework test report.  Unfortunately, this is not refreshed reactively using Meteor, so you will have to use the good-old F5 key to refresh on every run.
 
 You could also uncomment the `--debugfile  debug.txt` line in the [arguments.txt](tests/robotframework/arguments.txt) file and monitor it in realtime to see more detailed Robot Framework - generated debug logging in another console window:
 
@@ -45,6 +45,8 @@ $ tail -f debug.txt
 4. [De-composing and layering resource files](tests/robotframework/suites/selenium-resources.txt) to promote re-use and keeping the tests [DRY](http://en.wikipedia.org/wiki/Don%27t_repeat_yourself).
 
 5. Using [other Robot Framework libraries](tests/robotframework/suites/leaderboard-resources.txt#L44) to provide additional test functionality.  Take a look at the [list of libraries included in the Robot Framework distribution here](http://robotframework.org/robotframework/#standard-libraries), all of which could potentially be used in a meteor-robotframework test.  Plus, any of the many other third-party libraries out there (your search engine is your friend)
+
+6. Use of end-to-end test - specific Meteor fixture code in the tests/robotframework/fixtures folder.
 
 ### Acknowledgements
 

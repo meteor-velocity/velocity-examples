@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation  Common Web - testing resource user keywords
+Documentation  Common Web - testing resource user keywords.
 Library        Selenium2Library  WITH NAME  selenium
 Library        String
 Resource       selenium-resources.txt
@@ -23,9 +23,9 @@ Close All Leaderboard Client Sessions
     selenium.Close All Browsers
 
 Reset Leaderboard Application State
-    [Documentation]  Setup starting conditions for each Leaderboard test case
+    [Documentation]  Setup starting conditions for each Leaderboard test case.
 
-    # Invoke javascript to reset mirror database contents
+    # Invoke javascript to reset mirror database contents.
     # See leaderboard-fixtures.js
     ${err}=  selenium-resources.Run Async Javascript  fixtures.resetPlayers(callback);
     Should Be Equal  ${err}  ${None}  msg=${err}  values=False
