@@ -37,19 +37,30 @@ PlayersService = {
 };
 
 if (Meteor.isClient) {
+  Template.leaderboard.onCreated(function () {
+    var self = this;
+
+    self.getSelectedPlayer = function () {
+      var selectedPlayerId = Session.get('selected_player');
+      return PlayersService.getPlayer(selectedPlayerId);
+    };
+  });
+
   Template.leaderboard.helpers({
     players: function () {
       return PlayersService.getPlayerList();
     },
 
     selected_name: function () {
-      var player = PlayersService.getPlayer(Session.get("selected_player"));
+      var self = Template.instance();
+
+      var player = self.getSelectedPlayer();
       return player && player.name;
     }
   });
 
   Template.leaderboard.events({
-    'click input.inc': function () {
+    'click button[data-action="give-points"]': function () {
       PlayersService.rewardPlayer(Session.get("selected_player"));
     }
   });
@@ -67,6 +78,14 @@ if (Meteor.isClient) {
     }
   });
 }
+
+Meteor.methods({
+  'players/delete': function (playerId) {
+    check(playerId, String);
+
+    return Players.remove(playerId);
+  }
+})
 
 // On server startup, create some players if the database is empty.
 if (Meteor.isServer) {
