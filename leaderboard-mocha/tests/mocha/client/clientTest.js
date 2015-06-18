@@ -50,10 +50,10 @@ if (!(typeof MochaWeb === 'undefined')){
         chai.assert.equal(graceInitialPoints + 5, Players.findOne({name: "Grace Hopper"}).score);
       });
     });
-    
+
     describe("Player Ordering", function(){
-      it("should result in a list where the first player as many or more points than the second player", function(){
-        var players = Template.leaderboard.players().fetch();
+      it("should result in a list where the first player has as many or more points than the second player", function(){
+        var players = Players.find({}, {sort: {score: -1, name: 1}}).fetch();
         chai.assert(players[0].score >= players[1].score);
       });
     })
