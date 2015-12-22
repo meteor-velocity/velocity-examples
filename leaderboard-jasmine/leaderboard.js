@@ -76,7 +76,7 @@ if (Meteor.isServer) {
     }
 
     Meteor.publish('players', function(){
-      return Players.find();
+      return PlayersService.getPlayerList();
     });
   });
 }
