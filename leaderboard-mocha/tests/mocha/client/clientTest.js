@@ -13,7 +13,13 @@ if (!(typeof MochaWeb === 'undefined')){
     var unselectPlayer = function(){
       Session.set("selected_player", null);
       Meteor.flush();
-    }
+    };
+
+    describe("startup state", function() {
+      it("client can read settings.public", function(){
+        chai.assert.equal(Meteor.settings.public.info, "helloworld");
+      })
+    });
 
     describe("Select Grace Hopper", function(){
       before(function(done){
